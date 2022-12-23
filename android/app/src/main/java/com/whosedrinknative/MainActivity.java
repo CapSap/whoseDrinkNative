@@ -9,8 +9,8 @@ import android.os.Bundle;
 public class MainActivity extends ReactActivity {
 
   // add bottom nav
-  @Overrideprotected
-  void onCreate(Bundle savedInstanceState) {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);
   }
 
