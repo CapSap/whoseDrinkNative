@@ -1,14 +1,12 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text, View} from 'react-native';
-import {NamesInput} from './components/NamesInput';
-import {RoundRecorder} from './components/RoundRecorder';
+import {BottomTabsNav} from './screens/BottomTabsNav';
 
 const App: React.FC = () => {
   return (
-    <View>
-      <NamesInput />
-      <RoundRecorder />
-    </View>
+    <NavigationContainer>
+      <BottomTabsNav />
+    </NavigationContainer>
   );
 };
 
