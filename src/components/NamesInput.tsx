@@ -1,6 +1,16 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, {useState} from 'react';
+import {Text, TextInput, View} from 'react-native';
 
 export const NamesInput: React.FC = () => {
-  return <Text>names</Text>;
+  const [userName, setuserName] = useState('');
+  return (
+    <View>
+      <Text>Your Name</Text>
+      <TextInput
+        onChangeText={newText => setuserName(newText)}
+        placeholder="asddasdasdsadasads name"
+        defaultValue={userName}
+      />
+    </View>
+  );
 };
