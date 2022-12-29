@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export const NamesInput: React.FC = () => {
   const [userName, setuserName] = useState('');
@@ -13,6 +19,9 @@ export const NamesInput: React.FC = () => {
         placeholder="Your name"
         defaultValue={userName}
       />
+      <TouchableOpacity style={styles.button}>
+        <Text>Save</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -23,6 +32,11 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 12,
     borderWidth: 1,
+    padding: 10,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
     padding: 10,
   },
 });
